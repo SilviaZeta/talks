@@ -2,9 +2,11 @@ import luigi
 import luigi.contrib.hadoop
 import luigi.contrib.hdfs
 
+
 class InputText(luigi.ExternalTask):
     def output(self):
         return luigi.contrib.hdfs.HdfsTarget('/input')
+
 
 class WordCount(luigi.contrib.hadoop.JobTask):
     n_reduce_tasks = 98

@@ -1,5 +1,6 @@
 from mrjob import job, protocol
 
+
 class MRWordCount(job.MRJob):
     INTERNAL_PROTOCOL = protocol.RawProtocol
     OUTPUT_PROTOCOL = protocol.RawProtocol
